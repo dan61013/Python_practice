@@ -6,6 +6,7 @@
 作者: 黃建庭 著 松崗數位文創股份有限公司
 
 ## Chapter00
+### 安裝環境
 
 Python(必要), 虛擬環境(Virtual Environment) 以及 Visual Studio Code(編輯介面，IDE)下載安裝
 
@@ -122,4 +123,24 @@ String, 用'string'或"string"，都可以顯示字串
 
 ---
 
-## Chapter03 Python的資料儲存容器
+## Chapter03
+### Python的資料儲存容器
+
+### 儲存型態:
+
+    1. tuple: 依序儲存，可照順序取出，不可變
+    2. list: 依序儲存，可照順序取出，可變
+    3. dict: Key:Value，無順序，可變
+    4. set: 無順序
+※ 暫存
+
+---
+
+## Chapter04
+### 選擇結構
+
+程式主要的3個結構:
+
+    1. 循環結構: 依序執行
+    2. 選擇結構: 條件測試
+    3. 重複結構: 重複執行
