@@ -108,3 +108,18 @@ String, 用'string'或"string"，都可以顯示字串
 11. [2:10:2] -> 從2到9，間隔2
 
 #### 串接多行 \\ -> 一行(換行編寫), \n ->換行, \t -> tab
+
+### 彙整公式
+
+    1. str.split(chars)
+    2. chars.join(list)
+    3. str.find(something)
+    4. str.startswith(str)
+    5. str.endswith(str)
+    6. str.count(something)
+    7. str.zfill(value)
+    8. en: upper, lower, title, swapcase, capitalize
+
+---
+
+## Chapter03 Python的資料儲存容器
