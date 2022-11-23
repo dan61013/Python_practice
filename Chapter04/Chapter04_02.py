@@ -85,6 +85,34 @@ def app_4_4_4():
     else:
         print('c不在集合a裡')
 
+def app_ch4_ex1():
+    """近視判斷"""
+    eye = float(input('請輸入視力: '))
+    
+    print("近視" if eye < 1 else "視力正常")
+
+def app_ch4_ex2():
+    """象限判斷"""
+    x, y = float(input('請輸入x值: ')), float(input('請輸入y值: '))
+    
+    if x > 0 and y >0:
+        print('該點位於第一象限')
+    elif x < 0 and y >0:
+        print('該點位於第二象限')
+    elif x < 0 and y <0:
+        print('該點位於第三象限')
+    elif x > 0 and y <0:
+        print('該點位於第四象限')
+    else:
+        print('該點位於座標軸上')
+        
+def app_ch4_ex4():
+    """閏年判斷"""
+    years = int(input('請輸入西元年: '))
+    
+    print("閏年" if (years%4 == 0) and (years%100 != 0) or (years%400 == 0) else "不是閏年")
+
 if __name__ == '__main__':
     # main()
-    app_4_4_4()
+    # app_4_4_4()
+    app_ch4_ex4()
