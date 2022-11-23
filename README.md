@@ -23,7 +23,15 @@ Python(必要), 虛擬環境(Virtual Environment) 以及 Visual Studio Code(編�
 Python的輸入與輸出，主要有以下兩種功能
 
 1. print(*object) -> 列印顯示出objects
+```python
+# 列印顯示出objects
+print(*object)
+```
 2. Input([prompt]) -> 顯示[prompt]，讓使用者輸入文字(default: String)
+```python
+# 讓user輸入訊息
+input([prompt])
+```
 
 ---
 
@@ -73,7 +81,11 @@ Python主要的資料型別有以下 種:
 
 遞增: 在算術運算子的右邊，加上等於，就是遞增(減)算法
 
-Example: a = a + 1 -> a += 1
+Example:
+```python
+a = a + 1
+a += 1 # 答案同上列 a + 1
+```
 
 #### 比較運算子: <, <=, ==(等於), !=(不等於), >=, >
 
@@ -144,3 +156,27 @@ String, 用'string'或"string"，都可以顯示字串
     1. 循環結構: 依序執行
     2. 選擇結構: 條件測試
     3. 重複結構: 重複執行
+
+主要功能有:
+- if
+- elif
+- else
+
+※ 補充:
+1. if可以縮減成這樣的公式寫法:
+```python
+x = 1
+print('Test' if x == 1 else 'False')
+# True回傳的值 if 條件 else False回傳的值
+# ans: Test
+```
+
+---
+
+## Chapter05
+
+### 迴圈與生成式
+
+主要功能:
+- for
+- while
