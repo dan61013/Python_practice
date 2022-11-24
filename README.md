@@ -180,3 +180,79 @@ print('Test' if x == 1 else 'False')
 主要功能:
 - for
 - while
+
+#### for while的基本組合應用
+
+```python
+# 最外層指定一個range迴圈
+for i in range(2, 1000):
+    # 並指定內層迴圈的起始值，以及判斷條件
+    j = 2
+    prime = True
+
+    # 設定當內層迴圈j小於i的開根號=True
+    while j < math.sqrt(i):
+        if i % j == 0 # i除以J等於整除
+            prime = False # 則不是質數
+            break # 中斷處理
+        j + 1
+    
+    if prime: # 如果當prime = True是質數
+        print(i, '是質數') # 則列印出來
+
+```
+
+### break, continue, else
+
+- break: 如果符合條件，就中斷，執行後面的程式碼
+- continue: 如果符合條件，就跳過迴圈內之後的程式碼，重複執行到迴圈結束
+- else: 如果迴圈正常結束，執行此程式
+
+範例 (while, if, break, else):
+
+```python
+
+while True: # 無限迴圈
+    num = int(input('輸入要猜的整數: '))
+
+    if num == 100:
+        print('你輸入的數值是100')
+        break
+
+    else:
+        print('請再重猜，數值是1~100之間')
+
+```
+
+### for迴圈與資料儲存器
+可以迭代的容器
+1. tuple
+2. list
+3. dictionary
+   
+範例:
+```python
+# tuple
+for i in range(tuple('index')):
+    print(i) # i n d e x
+
+lst = [1, 2, 3, 4, 5]
+for i in range(0, len(lst)):
+    print(i) # 1 2 3 ...
+
+# 同時列印編號及元素
+for i, element in enumerate(lst, start=1):
+    print(i, element) # 1 1 ...
+
+ch = ['台灣':'Taiwan', '車子':'car', '公開的':'public']
+
+for key, value in ch.items():
+    print(key, value) # 台灣 Taiwan ...
+
+for key in ch.keys():
+    print(key, ch[key]) # 台灣 Taiwan ...
+
+for value in ch.values():
+    print(value) # Taiwan car ...
+
+```
