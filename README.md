@@ -256,3 +256,16 @@ for value in ch.values():
     print(value) # Taiwan car ...
 
 ```
+
+### 生成式 Comprehension
+
+```python
+# 生成一般串列
+[x for x in range(1, 6)]
+
+# 按照判斷條件生成串列
+[x for x in range(1, 11) if x % 2 == 1]
+
+# 巢狀生成式
+[(i, j, i * j) for i in range(1, 10) for j in range(1, 10)]
+```
