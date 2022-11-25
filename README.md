@@ -286,4 +286,134 @@ for w in word_count:
 
 ### 函式與遞迴
 
-函式用於結構化程式，
+函式用於結構化程式，可以幫助多位程式設計師共同開發系統，
+事先規劃好函式名稱與功能，再各自開發函式與整合所有程式，
+最後達成系統所需功能。
+
+### 函式的呼叫方法
+
+1. function_name(v01, v02, ...) -> 無回傳值的呼叫方式
+2. variable_01 = function_name(v01, v02, ...) -> 有回傳值的呼叫方式
+
+```python
+# function的區域、全域變數
+g = 5
+def t01():
+    g = 10
+    print(g) # 答案會是g=10，如果function內部沒有定義g，則g=5
+
+# 預設變數
+def t02(v01, v02=2):
+    return v01 * v02
+
+print(t02(3)) # 答案等於6
+
+def t03(a, b, c):
+    a += 2
+    b += 3
+    c += 4
+    return (a, b, c)
+
+x, y, z = t03(2, 3, 4)
+print(x, y, z) # 答案等於(4, 6, 8)
+```
+
+### 位置引數(Positional arguments)
+
+```python
+# args裡面可以用','分隔輸入多個數值，會以tuple的方式呈現
+def func_01(*args):
+    print('位置引數為', args)
+```
+
+### 關鍵字引數(Keyword arguments)
+
+```python
+def func_02(**kwargs):
+    print('關鍵字引數為', kwargs)
+```
+### 函式的說明文件
+
+用三引號的方式，可以新增函式說明
+
+```python
+def func():
+    """這理是
+    function的說明內容"""
+    return
+# 顯示function說明內容的兩個方式
+# 1. help
+help(func)
+# 2. __doc__
+print(func.__doc__)
+```
+
+### 函式視為物件 (object)
+
+python中，函數視為object，加上()括號才會執行該程式。
+
+### 函式lambda
+
+函式如果只有一行，可以轉換成函式lambda
+
+```python
+def add(a, b):
+    return a + b
+# lambda函數
+lambda a, b: a + b
+
+def t01(func, x, y):
+    return func(x, y)
+# 把lambda函數代入t01函式
+k = t01(lambda: a, b: a + b, 10, 20)
+print(k) # k = 30
+```
+
+### 函式產生器
+
+```python
+def irange(start: int, end: int, step=1):
+    for i in range(start, end, step):
+        yield i*i
+x = irange(1, 10)
+
+for i in x:
+    print(i)
+```
+
+### 內部函式, closure函式
+
+```python
+# 內部函數
+def func1():
+    def func2():
+        return
+    # 執行func1的動作
+# closure函式
+def hello(msg):
+    def say(hi):
+        return hi+msg
+    return say
+x = hello('Dan')
+print(x('Hi ')) # 結果: Hi Dan
+```
+
+### Decorator 裝飾器
+
+```python
+def debug(func1):
+    def func2(*args, **kwargs):
+        print('正在執行函式:', func1.__name__)
+        print('函式的說明文件:', func1.__doc__)
+        print('位置引數:', args)
+        print('關鍵引數:', kwargs)
+        return func1(*args, **kwargs)
+    return func2
+
+@debug
+def add(a, b, c):
+    '''計算a+b+c'''
+    return a + b + c
+```
+
+### 遞迴 Recursion
