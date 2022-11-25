@@ -2,6 +2,7 @@
 生成式(Comprehension)
 產生器(Generator)
 """
+import random
 
 def main():
     pass
@@ -60,6 +61,7 @@ def ch5_5_6_4():
         print(num) # 沒有值，因為產生器只能使用一次
 
 def fibonacci():
+    
     # 費氏定理
     num = int(input('輸入第幾項求費氏定理: '))
     a = 1
@@ -71,6 +73,7 @@ def fibonacci():
 
 def ch5_5_7_2():
     
+    # 列出所有文字，並計算每個文字出現的次數
     s = """
 君不見黃河之水天上來，奔流到海不復回。
 君不見高堂明鏡悲白髮，朝如青絲暮成雪。
@@ -95,6 +98,7 @@ def ch5_5_7_2():
     
 def ch5_ex1():
     
+    # 求平方和
     num = int(input('輸入項目值: '))
     
     sum = 0 # 給定一個變數當作起始值
@@ -105,13 +109,73 @@ def ch5_ex1():
 
 def ch5_ex1_2():
     
+    # 列出1~1000不被2 and 3整除的數值
     for i in range(1, 1001):
         if i % 2 != 0 and i % 3 != 0:
             print(i)
 
+def ch5_5_7_3():
+    
+    sec1 = {chr(ord('a') + i):chr(ord('a') + i - 1) for i in range(26) if i % 2}
+    sec2 = {chr(ord('a') + i):chr(ord('a') + i + 1) for i in range(26) if i % 2 == 0}
+    
+    sec1.update(sec2)
+    
+    print(sec1)
+    
+    s = 'bboy dan'
+    print(s)
+    
+    ss = ''
+    
+    for c in s:
+        if c != ' ':
+            ss += sec1[c]
+        else:
+            ss += ' '
+    print(ss)
+    
+    us = ''
+    
+    for c in ss:
+        if c != ' ':
+            us += sec1[c]
+        else:
+            us += ' '
+    print(us)
+    
+def ch5_ex5():
+    
+    # 找出完全數
+    # 設定範圍1~1000
+    for i in range(1, 1001):
+        
+        # sum default = 0
+        sum = 0
+        
+        for j in range(1, i):
+            if i % j == 0:
+                sum += j
+                
+        if sum == i:
+            print('{}是完全數'.format(i))
+            
+def ch5_ex6():
+    
+    """擲骰子"""
+    
+    while True:
+        dice = random.randint(1, 6)
+        print(dice)
+        
+        if dice == 6:
+            break
+
 if __name__ == '__main__':
+    
     # main()
-    ch5_ex1_2()
+    # ch5_5_7_3()
+    ch5_ex6()
     # ch5_5_7_2()
     # nine_nine_table()
     # fibonacci()

@@ -268,4 +268,22 @@ for value in ch.values():
 
 # 巢狀生成式
 [(i, j, i * j) for i in range(1, 10) for j in range(1, 10)]
+
+# dictionary生成式, 用計算字母出現次數舉例
+word = 'bboyworld'
+word_count = key : word.count(key) for key in set(word)
+for w in word_count:
+    print(w, word_count[w])
 ```
+### 補充函數:
+
+- python內建函數: chr() -> 返回一個整數值的ASCII字符
+- python內建函數: ord() -> 返回一個值的十進制整數
+
+---
+
+## Chapter06
+
+### 函式與遞迴
+
+函式用於結構化程式，
