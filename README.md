@@ -416,4 +416,42 @@ def add(a, b, c):
     return a + b + c
 ```
 
-### 遞迴 Recursion
+### 遞迴 Recursion Function (遞迴函式)
+
+```python
+def recursive(a, b):
+
+    if 條件判斷:
+        return something
+    else:
+        return recursion_function
+        # ex: recursive(參數a-1, 參數b+1)
+```
+## Chapter07
+
+### 模組、套件與獨立程式
+
+- 模組指的就是: 每一個python檔案
+- 透過匯入其他python模組，就可以不斷地被其他程式再利用
+- 單字: 變數、運算子等
+- 句子: 多個變數、運算子、邏輯組合成一行程式
+- 段落: 多行程式組合成函式
+- 文章: 堆個函式組成模組
+
+### 匯入模組的方式
+
+```python
+# 1
+import sys
+# 2
+from sys import path
+# 3
+import sys as s
+```
+
+### 腳本程式
+
+```python
+if __name__ == '__main__:
+    # doing something
+```

@@ -81,6 +81,13 @@ def ch6_ex6(num):
     else:
         return num + ch6_ex6(num-1)
 
+def ch6_ex7(m, n):
+    
+    if n == 0 or m == n:
+        return 1
+    else:
+        return ch6_ex7(m - 1, n) + ch6_ex7(m - 1, n - 1)
+
 def main():
     # n = int(input('輸入整數值: '))
     # ans = fac(n)
@@ -92,12 +99,24 @@ def main():
     
 if __name__ == '__main__':
     # main()
+    
+    # # 判斷密碼安全性
     # pwd = input('請輸入密碼: ')
     # sec = ch6_ex1(pwd)
     # print(f'{pwd}為{sec}')
-    n = int(input('輸入n值等於: '))
-    ans = ch6_ex6(n)
-    print('Answer: {}'.format(ans))
+    
+    # # 計算每一個數值的加總
+    # n = int(input('輸入n值等於: '))
+    # ans = ch6_ex6(n)
+    # print('Answer: {}'.format(ans))
+    
+    # # 計算階層
     # print(phtml('Dan'))
     # for i in ch6_ex4():
         # print(i)
+    
+    # 計算組合 C(m,n)
+    m = int(input('輸入m值: '))
+    n = int(input('輸入n值: '))
+    ans = ch6_ex7(m, n)
+    print(f'從{m}取{n}個的組合結果為{ans}', sep='')
