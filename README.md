@@ -455,3 +455,32 @@ import sys as s
 if __name__ == '__main__:
     # doing something
 ```
+
+---
+
+## Chapter08
+
+### 類別與例外
+
+```python
+class Animal():
+    # __init__表示宣告類別時，會自動執行的函式
+    def __init__(self, name): # 第一個參數預設是self，後面可以放其他參數
+        self.name = name
+a = Animal('動物')
+print(a.name) # 動物
+```
+
+### 繼承
+
+- 原有的類別，被稱為:
+  
+    1. 基礎類別: base class
+    2. 雙親類別: parent class
+- 新的類別，被稱為:
+  
+    1. 衍生類別: derived class
+    2. 子類別: child class
+
+使用derived class來定義類別間的繼承關係，
+衍生類別就繼承了基礎類別，在衍生類別使用***super().基礎類別的函數***，可以呼叫基礎類別的函式來幫忙。
