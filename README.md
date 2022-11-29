@@ -484,3 +484,48 @@ print(a.name) # 動物
 
 使用derived class來定義類別間的繼承關係，
 衍生類別就繼承了基礎類別，在衍生類別使用***super().基礎類別的函數***，可以呼叫基礎類別的函式來幫忙。
+
+```python
+class Animal():
+    def __init__(self, name):
+        self.name = name
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__('小狗'+name) # Super()繼承name的屬性
+a = Animal('動物')
+b = Dog('小白')
+print(a.name) # 動物
+print(b.name) # 小狗小白
+```
+
+### 覆寫函式
+
+衍生類別可以覆蓋(改寫)基礎類別中的相同名稱函數。
+
+```python
+class Animal():
+    
+    def __init__(self, name): # 不要把sound放入init屬性內
+        self.name = name
+    
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    
+    def __init__(self, name):
+        super().__init__('小狗: ' + name)
+    
+    def sound(self): # 覆寫sound函式
+        return '汪汪叫'
+
+def main():
+    
+    d = Dog('小白')
+    print(d.name)
+    print(d.sound())
+    
+if __name__ == '__main__':
+    main()
+```
