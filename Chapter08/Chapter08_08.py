@@ -25,6 +25,9 @@ def main():
     d2 = Dog('小黑', 4)
     print(d1.eq(d2))
     print(d1 == d2)
+    d3 = Dog('小白', 4)
+    print(d1.eq(d3))
+    print(d1 == d3)
 
 if __name__ == '__main__':
     main()

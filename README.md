@@ -462,6 +462,22 @@ if __name__ == '__main__:
 
 ### 類別與例外
 
+### 實例函數 (Instance class)
+1. 隱藏參數: 在變數命名時，最前方加上兩個底線
+```python
+class A:
+    def __init__(self, number):
+        self.__number = number
+```
+2. 特殊函數__eq__的各式用法:
+   - \_\_eq__(self, other) -> self == other
+   - \_\_ne__(self, other) -> self != other
+   - \_\_gt__(self, other) -> self > other
+   - \_\_ge__(self, other) -> self >= other
+   - \_\_lt__(self, other) -> self < other
+   - \_\_le__(self, other) -> self <= other
+3. 
+
 ```python
 class Animal():
     # __init__表示宣告類別時，會自動執行的函式
@@ -529,3 +545,25 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+---
+
+### 類別方法 (classmethod)
+
+1. 直接在class最外層建立變數
+2. 在function上方先加入**classmethod**
+3. 在function參數中，新增**cls**
+4. 此方法的function內部，可以用**cls.變數名稱**，來使用class variable
+
+### 靜態方法 (staticmethod)
+
+直接在class內部的函式上方，加入**staticmethod**
+
+---
+
+### Exception 例外
+
+- try... except ...
+  
+  可以攔截例外，在try區塊中撰寫可能會發生錯誤的情況，
+  若發生錯誤，則會到except區塊執行後續的處理
