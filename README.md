@@ -567,3 +567,101 @@ if __name__ == '__main__':
   
   可以攔截例外，在try區塊中撰寫可能會發生錯誤的情況，
   若發生錯誤，則會到except區塊執行後續的處理
+
+- raise: 用來引發錯誤
+- 可以有多個except來設定每個錯誤要執行的程式
+- except IndexError as id: -> 用as可以命名
+- else: 如果沒有異常中斷，則會接續執行else
+- finally: 不論如何最終一定會執行的程式
+
+```python
+import os
+
+try:
+    test_list = [1, 2, 3, 4, 5]
+
+    index = int(input('輸入索引值: '))
+
+    if index not in test_list:
+
+        raise IndexError
+    
+    print(test_list[index])
+
+except IndexError:
+    print('索引值超出範圍')
+
+except Exception:
+    print('發生其他錯誤')
+
+```
+
+---
+
+## Chapter09
+
+### 進階字串處理
+
+### ASCII
+
+- 是最早的電腦系統編碼
+- 只包含大小寫字母、數字、英文標點符號、數學運算符號與控制符號等
+- 共128個字
+- 將二進位編碼的控制符號轉換成十進位，介於0~31，再加上127，共33個 (32 + 1)
+  
+※ 常用功能:
+
+    import string
+    - ascii_letters -> 大小寫字母
+    - ascii_lowercase -> 小寫
+    - ascii_uppercase -> 大小
+    - digits -> 十進位
+    - hexdigits -> 十六進位
+    - octdigits -> 八進位
+    - punctuation -> 標點符號
+    - printable -> 十進位數、全字母、標點、空白符號
+    - whitespace -> 空白字符
+
+### Unicode 編碼
+
+Unicode可以分為4個十六進位，或8個十六進位表示
+
+1. \u -> 4個十六進位: \u6211 = '我'
+2. \U -> 8個十六進位: \U00006211 = '我'
+3. \N -> 標準名稱: \N{CJK UNIFIED IDEOGRAPH-6211} = '我'
+
+※ 常用功能:
+
+    import unicodedata
+
+    - unicodedata.name('str') -> 可以把字元轉換成標準名稱
+    - unicodedata.lookup('str') -> 可以把標準名稱轉換成字元
+
+### 編碼 (encode)
+
+- 將字串轉換成位元組(byte)，稱作編碼(encode)
+- 將已編碼的位元組(byte)，還原成原來的字串，稱作解碼(decode)
+- 目前最常用的是 UTF-8
+  - 由Unicode編碼轉換
+  - 每個字元由1到4個位元組表示
+  - 位元組數量:
+    - ASCII: 1
+    - 拉丁、希臘、阿拉伯文: 2
+    - 大部分中文: 3
+    - 古義大利字母、日文假名補充、音樂符號: 4
+
+### 解碼 (decode)
+
+    str.decode('utf8')
+
+### 正規表示式 (regular expression)
+
+使用正規表示式找尋特定字串是否存在，進行字串取代。
+
+正規表示式常用於字串的分析與提取，python中的模組: **re**
+
+```python
+import re
+
+
+```
