@@ -57,6 +57,7 @@ def test_001():
     print(counter_dict_02)
     
     # default_factory: 第一個接受函數對象以後，都比照一般dict傳入格式
+    # __missing__(key): 在我們調用不存在的key時，defaultdict會調用這個方法
 
 def main():
     
