@@ -12,6 +12,11 @@ python中，任一對象(object)，都定義了一個可以返回迭代器的__i
 def generator_function():
     for i in range(20):
         yield i
+
+# next()
+def generator_function_02():
+    for i in range(3):
+        yield i
         
 # Fibonacci
 def fibon(n):
@@ -22,8 +27,19 @@ def fibon(n):
 
 def main():
     # 基本生成迴圈0~19
-    for item in generator_function():
-        print(item)
+    # for item in generator_function():
+    #     print(item)
+    
+    gen = generator_function_02()
+    print(next(gen))
+    print(next(gen))
+    print(next(gen))
+    # print(next(gen)) # 這一行會產生Error: StopIteration
+    
+    # String不是一個iterator, 所以要先用iter才能使用next()函式
+    txt = "Bboyworld"
+    txt_iter = iter(txt)
+    print(next(txt_iter)) # B
         
 if __name__ == "__main__":
     main()
