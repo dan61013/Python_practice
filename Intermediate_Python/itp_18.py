@@ -41,12 +41,20 @@ def test_03():
     cat_01 =  Animal('小黑', 1, 'cat')
     print(cat_01.name, cat_01.type)
 
+# 在function內計算，並用namedtuple回傳對應的變數
 def cal_01(a, b):
     sum = a + b
     multiply = a * b
     calculate = namedtuple('calculate', 'sum multiply')
     ans = calculate(sum, multiply)
     return ans
+
+# named tuple 轉換成dictionary
+def test_04():
+    Animal = namedtuple('Animal', 'name age type')
+    mira = Animal(name='Mira', age=1, type='cat')
+    mira_dict = mira._asdict()
+    print(mira_dict, type(mira_dict))
 
 def main():
     # deque
@@ -57,7 +65,11 @@ def main():
     test_03()
     
     # namedtuple with function return
-    calculate = cal_01
+    calculate = cal_01(3, 5)
+    print(calculate) # calculate(sum=8, multiply=15)
+    
+    # print namedtuple by dict
+    test_04() # {'name': 'Mira', 'age': 1, 'type': 'cat'} <class 'dict'>
     
 if __name__ == "__main__":
     main()

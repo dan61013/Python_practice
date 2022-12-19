@@ -17,6 +17,13 @@
     13. itp_13.py -> 裝飾器類 Decorator class
     14. itp_14.py -> Global, Return
     15. itp_15.py -> mutable 對象變動
+    16. itp_16.py -> slots魔法
+    17. itp_17.py -> Collections.defaultdict and Counter
+    18. itp_18.py -> Collections.deque and namedtuple
+    19. itp_19.py -> Collections.namedtuple and enum.Enum
+    20. itp_20.py -> enumerate
+    21. itp_21.py -> type, id, dir and inspect.getmembers
+    22. itp_21.py -> comprehension
 
 ## Decorator (函數中包含裝飾器)
 * log檔是由itp_12.py，function: logit 產生
