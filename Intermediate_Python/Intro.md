@@ -24,6 +24,22 @@
     20. itp_20.py -> enumerate
     21. itp_21.py -> type, id, dir and inspect.getmembers
     22. itp_21.py -> comprehension
-
+    23. itp_22.py -> comprehension
+    24. itp_23.py -> exception, try, else, finally
+    25. itp_24.py -> class, 類變量與實例變量
+    26. itp_25.py -> class, 屬性, init and getitem
+    27. itp_26.py -> lambda (包含一個numpy的ithelp問題)
+    28. 
 ## Decorator (函數中包含裝飾器)
 * log檔是由itp_12.py，function: logit 產生
+  
+## 快速分享電腦中的Python檔案
+```
+py -m http.server
+```
+
+## 建立C的so共享檔案
+```
+// gcc c_filename.c -fPIC -shared -o so_filename.so
+gcc add.c -fPIC -shared -o adder.so
+```
