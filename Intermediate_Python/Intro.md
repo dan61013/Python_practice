@@ -29,7 +29,11 @@
     25. itp_24.py -> class, 類變量與實例變量
     26. itp_25.py -> class, 屬性, init and getitem
     27. itp_26.py -> lambda (包含一個numpy的ithelp問題)
-    28. 
+    28. itp_27.py -> for, else
+    29. itp_28.py -> cpython, Python C API (未完成)
+    30. itp_29.py -> open
+    31. itp_30.py -> Python 2 & 3
+    32. itp_31.py -> 共常式; 協程 coroutine (待更新)
 ## Decorator (函數中包含裝飾器)
 * log檔是由itp_12.py，function: logit 產生
   
