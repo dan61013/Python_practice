@@ -33,7 +33,9 @@
     29. itp_28.py -> cpython, Python C API (未完成)
     30. itp_29.py -> open
     31. itp_30.py -> Python 2 & 3
-    32. itp_31.py -> 共常式; 協程 coroutine (待更新)
+    32. itp_31.py -> 共常式; 協程 coroutine
+    33. itp_32.py -> lru_cache，最多緩存最近N個return值
+    34. itp_33.py -> 上下文管理器
 ## Decorator (函數中包含裝飾器)
 * log檔是由itp_12.py，function: logit 產生
   
