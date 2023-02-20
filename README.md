@@ -5,6 +5,7 @@
 * [Python程式設計: 從入門到進階應用](https://www.eslite.com/product/1001115182542678)
 * [Python进阶](https://eastlakeside.gitbook.io/interpy-zh/)
 * [Python Type Hints](https://segmentfault.com/a/1190000040864758)
+* [typing — Support for type hints](https://docs.python.org/3/library/typing.html)
 ---
 
 ## Table of contents
