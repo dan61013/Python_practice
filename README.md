@@ -98,6 +98,8 @@
 
 Python的輸入與輸出，主要有以下兩種功能
 
+[語法練習](Chapter01/Chapter01_03.py)
+
 1. `print(*object)` -> 列印顯示出objects
 ```python
 # 列印顯示出objects
@@ -117,6 +119,9 @@ Python主要的資料型別有以下4種:
 2. Integer (整數)
 3. Float (浮點數)
 4. String (字串)
+
+[語法練習](Chapter02/Chapter02_01.py)
+
 ### 2-2 False Objects
 1. `False`
 2. `0`
@@ -145,6 +150,8 @@ Python主要的資料型別有以下4種:
 
 ### 2-4 運算子
 
+[基礎運算子](Chapter02/Chapter02_02.py)
+
 #### 2-4-1 指定運算子
 `=`號右邊的數值先計算，再回傳給左邊的Variant
 
@@ -168,6 +175,9 @@ a += 1 # 答案同上列 a + 1
 #### 2-4-5 in, is 運算子
 
 #### 2-4-6 位元運算
+
+[位元運算子](Chapter02/Chapter02_03.py)
+
 |符號|說明|
 |-|-|
 |`&`|位元且運算
