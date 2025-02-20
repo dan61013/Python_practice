@@ -6,31 +6,29 @@
 - [Python进阶](https://eastlakeside.gitbook.io/interpy-zh/)
 - [Python Type Hints](https://segmentfault.com/a/1190000040864758)
 - [typing — Support for type hints](https://docs.python.org/3/library/typing.html)
----
 
 ## Table of contents
 
 - [Python Notes](#python-notes)
   - [Table of contents](#table-of-contents)
   - [Chapter00 Introduction](#chapter00-introduction)
-    - [0-1 安裝環境](#0-1-安裝環境)
+    - [0-1 Setting Environment](#0-1-setting-environment)
   - [Chapter01 Input \& Output](#chapter01-input--output)
-  - [Chapter02](#chapter02)
-    - [2-1 資料型別、變數與運算子](#2-1-資料型別變數與運算子)
-    - [2-2 False Objects](#2-2-false-objects)
-    - [2-3 Variables](#2-3-variables)
-    - [2-4 運算子](#2-4-運算子)
-      - [2-4-1 指定運算子](#2-4-1-指定運算子)
-      - [2-4-2 算術運算子](#2-4-2-算術運算子)
-      - [2-4-3 比較運算子](#2-4-3-比較運算子)
-      - [2-4-4 邏輯運算子](#2-4-4-邏輯運算子)
-      - [2-4-5 in \& is 運算子](#2-4-5-in--is-運算子)
-      - [2-4-6 位元運算](#2-4-6-位元運算)
-    - [2-5 String](#2-5-string)
-      - [2-5-1 字串運算子](#2-5-1-字串運算子)
-      - [2-5-2 切割字串](#2-5-2-切割字串)
-      - [2-5-3 串接多行](#2-5-3-串接多行)
-    - [2-6 常見公式](#2-6-常見公式)
+  - [Chapter02 資料型別、變數與運算子](#chapter02-資料型別變數與運算子)
+    - [2-1 False Objects](#2-1-false-objects)
+    - [2-2 Variables](#2-2-variables)
+    - [2-3 運算子](#2-3-運算子)
+      - [2-3-1 指定運算子](#2-3-1-指定運算子)
+      - [2-3-2 算術運算子](#2-3-2-算術運算子)
+      - [2-3-3 比較運算子](#2-3-3-比較運算子)
+      - [2-3-4 邏輯運算子](#2-3-4-邏輯運算子)
+      - [2-3-5 in \& is 運算子](#2-3-5-in--is-運算子)
+      - [2-3-6 位元運算](#2-3-6-位元運算)
+    - [2-4 String](#2-4-string)
+      - [2-4-1 字串運算子](#2-4-1-字串運算子)
+      - [2-4-2 切割字串](#2-4-2-切割字串)
+      - [2-4-3 串接多行](#2-4-3-串接多行)
+    - [2-5 常見公式](#2-5-常見公式)
   - [Chapter03 Data Structures](#chapter03-data-structures)
     - [3-1 Tuple](#3-1-tuple)
     - [3-2 List](#3-2-list)
@@ -74,11 +72,9 @@
     - [9-4 解碼 (decode)](#9-4-解碼-decode)
     - [9-5 正規表示式 (regular expression)](#9-5-正規表示式-regular-expression)
 
----
-
 ## Chapter00 Introduction
 
-### 0-1 安裝環境
+### 0-1 Setting Environment
 
 1. [Python](https://www.python.org/downloads/)
 2. Virtual Environment
@@ -98,9 +94,7 @@ Python的輸入與輸出分別為:
 
 [I/O練習](Chapter01/Chapter01_03.py)
 
-## Chapter02
-
-### 2-1 資料型別、變數與運算子
+## Chapter02 資料型別、變數與運算子
 
 Python主要的資料型別有以下4種:
 
@@ -113,7 +107,7 @@ Python主要的資料型別有以下4種:
 
 [語法練習](Chapter02/Chapter02_01.py)
 
-### 2-2 False Objects
+### 2-1 False Objects
 
 `0`, `None`或是`Null`都為`False == 0`，包含以下幾種情形:
 
@@ -131,7 +125,7 @@ Python主要的資料型別有以下4種:
 1. `int`範圍: **-2147483648** through **2147483647**
 2. String是不可變(immutable)物件，不能直接用list方法取出變更
 
-### 2-3 Variables
+### 2-2 Variables
 
 命名規則:
 
@@ -144,15 +138,15 @@ Python主要的資料型別有以下4種:
 
 例如: 當`x = 10` & `y = x`時，則此時x & y都是指向**同一個ID**位址的物件。
 
-### 2-4 運算子
+### 2-3 運算子
 
 [基礎運算子練習](Chapter02/Chapter02_02.py)
 
-#### 2-4-1 指定運算子
+#### 2-3-1 指定運算子
 
 `=`號右邊的數值(公式)先計算，再回傳給左邊的variable
 
-#### 2-4-2 算術運算子
+#### 2-3-2 算術運算子
 
 `+`, `-`, `*`, `/`(浮點除法), `//`(整數除法), `%`(相除後求餘數), `**`(次方)
 
@@ -165,15 +159,15 @@ a = a + 1
 a += 1  # 答案同上列 a + 1
 ```
 
-#### 2-4-3 比較運算子
+#### 2-3-3 比較運算子
 
 `<`, `<=`, `==`(equal), `!=`(not equal), `>=`, `>`
 
-#### 2-4-4 邏輯運算子
+#### 2-3-4 邏輯運算子
 
 `and`, `or`, `not`
 
-#### 2-4-5 in & is 運算子
+#### 2-3-5 in & is 運算子
 
 - `in` : 判斷object是否存在於string or list中。
 - `is` : 判斷這2個objects是否相等(相同ID)
@@ -207,7 +201,7 @@ if __name__ == "__main__":
 
 ```
 
-#### 2-4-6 位元運算
+#### 2-3-6 位元運算
 
 | 符號  | 說明         |
 |:----:|:------------:|
@@ -220,7 +214,7 @@ if __name__ == "__main__":
 
 [位元運算子](Chapter02/Chapter02_03.py)
 
-### 2-5 String
+### 2-4 String
 
 String, 用單引號`''`或雙引號`""`，都可以顯示字串
 
@@ -237,14 +231,14 @@ def foo():
 
 ```
 
-#### 2-5-1 字串運算子
+#### 2-4-1 字串運算子
 
 - `+` : (合併N個string)
 - `*N`: (重複N次字串)
 
 [字串連接練習](./Chapter02/Chapter02_04.py)
 
-#### 2-5-2 切割字串
+#### 2-4-2 切割字串
 
 有以下幾種方式:
 
@@ -253,14 +247,14 @@ def foo():
 - `str[::-1]` : reversed
 - `str[2:10:2]` : from index 2 to 9，步長為2
 
-#### 2-5-3 串接多行
+#### 2-4-3 串接多行
 
 |符號   |說明  |
 |:----:|:----:|
 | `\n` | 換行 |
 | `\t` | tab  |
 
-### 2-6 常見公式
+### 2-5 常見公式
 
   1. `str.split(chars)`
   2. `chars.join(list)`
